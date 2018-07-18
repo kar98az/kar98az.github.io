@@ -4,24 +4,32 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | Hexo</title>
+    <title>replace的解析 | Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="John Doe">
     
 
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="花了一些时间了解了一篇逆向题，对于我来说，是比较难了，看了别人的解题步骤明白了一点点，这个可执行文件首先打开看看什么情况，如下：神奇了，输入别的显示不出来，只能输入数字。可以判断里面有只能接受数字的函数，可是就算输入数字，点击check，程序崩了。拖进IDA，看看何方神圣。拖进去，shift+f12寻找字符串correct！一步步来到text段后发现，程序跳过了，correct。如下：在00401">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/07/18/hello-world/index.html">
+<meta property="og:title" content="replace的解析">
+<meta property="og:url" content="http://yoursite.com/2018/07/17/逆向第一篇/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="花了一些时间了解了一篇逆向题，对于我来说，是比较难了，看了别人的解题步骤明白了一点点，这个可执行文件首先打开看看什么情况，如下：神奇了，输入别的显示不出来，只能输入数字。可以判断里面有只能接受数字的函数，可是就算输入数字，点击check，程序崩了。拖进IDA，看看何方神圣。拖进去，shift+f12寻找字符串correct！一步步来到text段后发现，程序跳过了，correct。如下：在00401">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-18T04:23:06.088Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/41283616/42814149-eb7adf64-89f5-11e8-8006-8ee69816ce8f.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/41283616/42814541-217324f4-89f7-11e8-8954-580536ea1424.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/41283616/42814744-c6106670-89f7-11e8-82ea-1999775e22a9.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/41283616/42815511-259158a0-89fa-11e8-965a-e46cecc070a8.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/41283616/42815751-e55b52f8-89fa-11e8-842d-06fb3dd4e53a.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/41283616/42816349-1ac51bf2-89fd-11e8-9f76-1af499be143d.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/41283616/42816608-f87ef328-89fd-11e8-86c6-9e99dfe4da29.png">
+<meta property="og:updated_time" content="2018-07-17T13:08:41.841Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="replace的解析">
+<meta name="twitter:description" content="花了一些时间了解了一篇逆向题，对于我来说，是比较难了，看了别人的解题步骤明白了一点点，这个可执行文件首先打开看看什么情况，如下：神奇了，输入别的显示不出来，只能输入数字。可以判断里面有只能接受数字的函数，可是就算输入数字，点击check，程序崩了。拖进IDA，看看何方神圣。拖进去，shift+f12寻找字符串correct！一步步来到text段后发现，程序跳过了，correct。如下：在00401">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/41283616/42814149-eb7adf64-89f5-11e8-8006-8ee69816ce8f.png">
 
     
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -81,14 +89,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/07/18/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2018/07/17/逆向第一篇/" title="replace的解析" itemprop="url">replace的解析</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="John Doe" target="_blank" itemprop="author">John Doe</a>
 		
   <p class="article-time">
-    <time datetime="2018-07-18T04:23:06.088Z" itemprop="datePublished"> Published 2018-07-18</time>
+    <time datetime="2018-07-17T11:12:10.000Z" itemprop="datePublished"> Published 2018-07-17</time>
     
   </p>
 </header>
@@ -97,19 +105,11 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+			
 		
 		</div>
 		
-		<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+		<p>花了一些时间了解了一篇逆向题，对于我来说，是比较难了，看了别人的解题步骤明白了一点点，<br>这个可执行文件首先打开看看什么情况，如下：<br><img src="https://user-images.githubusercontent.com/41283616/42814149-eb7adf64-89f5-11e8-8006-8ee69816ce8f.png" alt="image"><br>神奇了，输入别的显示不出来，只能输入数字。可以判断里面有只能接受数字的函数，可是就算输入数字，点击check，程序崩了。<br>拖进IDA，看看何方神圣。<br><img src="https://user-images.githubusercontent.com/41283616/42814541-217324f4-89f7-11e8-8954-580536ea1424.png" alt="image"><br>拖进去，shift+f12寻找字符串correct！一步步来到text段后发现，程序跳过了，correct。如下：<br><img src="https://user-images.githubusercontent.com/41283616/42814744-c6106670-89f7-11e8-82ea-1999775e22a9.png" alt="image"><br>在00401071的位置jmp 401084,完美错过了correct。要想程序执行correct这一步，那么要走到401073，<br>在IDA里还可以找到与“只能输入数字”有关的函数，GetDlgItemInt,它的地址为<br><img src="https://user-images.githubusercontent.com/41283616/42815511-259158a0-89fa-11e8-965a-e46cecc070a8.png" alt="image"><br>以上地址则是完成解题的关键。由于这里跳过了correct，只能动态调试了，再将文件拉进od,找到这些地址，<br>首先找到correct，我们发现在correct上面有控制输入的函数GetDlgItemInt。<br><img src="https://user-images.githubusercontent.com/41283616/42815751-e55b52f8-89fa-11e8-842d-06fb3dd4e53a.png" alt="image"><br>重载输入0，f8步过，到4010A9,的时候程序跳到了莫名的地方，然后不动了。那就在这里断点，看看这个函数作什么妖。<br><img src="https://user-images.githubusercontent.com/41283616/42816349-1ac51bf2-89fd-11e8-9f76-1af499be143d.png" alt="image"><br>进入后发现它将90,复制给了eax。相当于将eax Nop掉，而且当输入0测试的时候，eax为601005CB，而输入数值为12后，eax数值为601005D7<br><img src="https://user-images.githubusercontent.com/41283616/42816608-f87ef328-89fd-11e8-86c6-9e99dfe4da29.png" alt="image"><br>而，可知，601005CB+输入的数值=eax,则，可以601005Cb+输入值=0x100401071(401071则是correct的地址了)<br>计算器可算出应输入：2687109798。replace ，很名副其实。<br><a href="https://pan.baidu.com/s/1CcREmRXl7o52RTjYkqeJKQ" target="_blank" rel="noopener">链接</a><br>密码:e1sb</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -122,7 +122,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2018/07/18/hello-world/" data-title="Hello World | Hexo" data-tsina="" class="share clearfix">
+	  <div data-url="http://yoursite.com/2018/07/17/逆向第一篇/" data-title="replace的解析 | Hexo" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -135,11 +135,19 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2018/07/18/hello-world/" title="Hello World">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Hello World</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/2018/07/17/逆向第一篇/"  title="replace的解析">
+<a href="/2018/07/16/搭建博客/"  title="搭建博客">
  <strong>下一篇：</strong><br/> 
- <span>replace的解析
+ <span>搭建博客
 </span>
 </a>
 </div>
@@ -156,7 +164,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+ 
  
   </div>
 
