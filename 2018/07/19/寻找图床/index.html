@@ -4,28 +4,27 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>crackme之走迷宫 | far‘blog</title>
+    <title>寻找图床/chrome插件的坑 | far‘blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="far">
     
 
     
-    <meta name="description" content="这是一道关于走迷宫的逆向题，也是逆向的常见题型。 ##寻找关键代码这是整个走迷宫的运行机制，v7,v17则是控制着往哪里走，v7–向上走，v7++则是往下走，而且v7还是初始化为3，则是起始位置是（3,0），那么终点就是（9,8）。点击sub_401000进入，这是整个代码最核心的部分，这里控制着v7,v17的值，a2也就是上图传入的a8,a8也就是选择v7/v17的。你输入的数值v6的每一位与4">
+    <meta name="description" content="用hexo搭建的博客，图片的url获取一直是一个问题，之前用GitHub当图床，可是上传文件有时成功，有时失败。就想换个图床，就在网上搜到了极简图床，听人说挺好用。你在极简图床上传图片，可以同步到相应的云储存，这里我用微博图床。因为其他两个注册都遇到了，麻烦。正如图片所显示的，还需要chrome的插件，如果没有Google，下一个。然而插件按照他的提示下载下来了，并且，也打开了扩展程序。只要把下载">
 <meta property="og:type" content="article">
-<meta property="og:title" content="crackme之走迷宫">
-<meta property="og:url" content="http://yoursite.com/2018/07/19/crackme/index.html">
+<meta property="og:title" content="寻找图床&#x2F;chrome插件的坑">
+<meta property="og:url" content="http://yoursite.com/2018/07/19/寻找图床/index.html">
 <meta property="og:site_name" content="far‘blog">
-<meta property="og:description" content="这是一道关于走迷宫的逆向题，也是逆向的常见题型。 ##寻找关键代码这是整个走迷宫的运行机制，v7,v17则是控制着往哪里走，v7–向上走，v7++则是往下走，而且v7还是初始化为3，则是起始位置是（3,0），那么终点就是（9,8）。点击sub_401000进入，这是整个代码最核心的部分，这里控制着v7,v17的值，a2也就是上图传入的a8,a8也就是选择v7/v17的。你输入的数值v6的每一位与4">
+<meta property="og:description" content="用hexo搭建的博客，图片的url获取一直是一个问题，之前用GitHub当图床，可是上传文件有时成功，有时失败。就想换个图床，就在网上搜到了极简图床，听人说挺好用。你在极简图床上传图片，可以同步到相应的云储存，这里我用微博图床。因为其他两个注册都遇到了，麻烦。正如图片所显示的，还需要chrome的插件，如果没有Google，下一个。然而插件按照他的提示下载下来了，并且，也打开了扩展程序。只要把下载">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftf2ncz320j30jz0ckt91.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftf4nonvjyj30em0apglo.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftf5jloq6fj30mu02p3yg.jpg">
-<meta property="og:updated_time" content="2018-07-19T07:06:01.164Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftf73gydcjj30sy08x3z8.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftf79yxjd6j30m600ydfo.jpg">
+<meta property="og:updated_time" content="2018-07-19T07:45:45.012Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="crackme之走迷宫">
-<meta name="twitter:description" content="这是一道关于走迷宫的逆向题，也是逆向的常见题型。 ##寻找关键代码这是整个走迷宫的运行机制，v7,v17则是控制着往哪里走，v7–向上走，v7++则是往下走，而且v7还是初始化为3，则是起始位置是（3,0），那么终点就是（9,8）。点击sub_401000进入，这是整个代码最核心的部分，这里控制着v7,v17的值，a2也就是上图传入的a8,a8也就是选择v7/v17的。你输入的数值v6的每一位与4">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftf2ncz320j30jz0ckt91.jpg">
+<meta name="twitter:title" content="寻找图床&#x2F;chrome插件的坑">
+<meta name="twitter:description" content="用hexo搭建的博客，图片的url获取一直是一个问题，之前用GitHub当图床，可是上传文件有时成功，有时失败。就想换个图床，就在网上搜到了极简图床，听人说挺好用。你在极简图床上传图片，可以同步到相应的云储存，这里我用微博图床。因为其他两个注册都遇到了，麻烦。正如图片所显示的，还需要chrome的插件，如果没有Google，下一个。然而插件按照他的提示下载下来了，并且，也打开了扩展程序。只要把下载">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftf73gydcjj30sy08x3z8.jpg">
 
     
     <link rel="alternative" href="/atom.xml" title="far‘blog" type="application/atom+xml">
@@ -85,14 +84,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/07/19/crackme/" title="crackme之走迷宫" itemprop="url">crackme之走迷宫</a>
+      <a href="/2018/07/19/寻找图床/" title="寻找图床/chrome插件的坑" itemprop="url">寻找图床/chrome插件的坑</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="far" target="_blank" itemprop="author">far</a>
 		
   <p class="article-time">
-    <time datetime="2018-07-19T03:21:49.000Z" itemprop="datePublished"> Published 2018-07-19</time>
+    <time datetime="2018-07-19T07:09:34.000Z" itemprop="datePublished"> Published 2018-07-19</time>
     
   </p>
 </header>
@@ -105,9 +104,7 @@
 		
 		</div>
 		
-		<p>这是一道关于走迷宫的逆向题，也是逆向的常见题型。</p>
-<p>##寻找关键代码<br>这是整个走迷宫的运行机制，v7,v17则是控制着往哪里走，v7–向上走，v7++则是往下走，而且v7还是初始化为3，则是起始位置是（3,0），那么终点就是（9,8）。<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftf2ncz320j30jz0ckt91.jpg" alt=""><br>点击sub_401000进入，这是整个代码最核心的部分，这里控制着v7,v17的值，a2也就是上图传入的a8,a8也就是选择v7/v17的。你输入的数值v6的每一位与40E000数组的每一个进行对比，也就是你输入的数值要在40E000的数组中，而且每一步还要符合是迷宫的正确走法。<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftf4nonvjyj30em0apglo.jpg" alt=""><br>40E000数组的内容和40E018的内容：<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftf5jloq6fj30mu02p3yg.jpg" alt=""></p>
-<p>##解析<br>迷宫中“#”是通行，“*”是障碍物。这一点从代码中也可以看出来。也可以看出迷宫图是9行10列。那么a8就是4114，4422，3222，4414，4442，2223。则可以逆向推出v6应该是Ba47F1A256E0B347F1B2C6Ef,这就是最终flag，</p>
+		<p>用hexo搭建的博客，图片的url获取一直是一个问题，之前用GitHub当图床，可是上传文件有时成功，有时失败。就想换个图床，就在网上搜到了<a href="https://jiantuku.com/" target="_blank" rel="noopener">极简图床</a>，听人说挺好用。<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftf73gydcjj30sy08x3z8.jpg" alt=""><br>你在极简图床上传图片，可以同步到相应的云储存，这里我用微博图床。因为其他两个注册都遇到了，麻烦。<br>正如图片所显示的，还需要chrome的插件，如果没有Google，下一个。<br>然而插件按照他的提示下载下来了，并且，<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftf79yxjd6j30m600ydfo.jpg" alt=""><br>也打开了扩展程序。只要把下载的文件拖进去，点击添加加好了，可是遇到坑了，jiantuku.crt不是chrome store的内部插件，就算添加了启用不了。<a href="https://blog.csdn.net/wenliheng0/article/details/79526586" target="_blank" rel="noopener">上网搜索</a>,在这里有详细的填坑方案。<br>就是将后缀.crt改成.rar进行压缩。然后在解压成一个文件夹<br>再在扩展程序里勾选开发者模式，<br>然后点击“加载已经解压的扩展程序”，就会出现你想要的。<br>安装好了插件，上传图片会自动生成链接，点击Markdown，就会将”<img src="" alt="">“形式的外链自动复制到粘贴板。<br>上传图片支持Ctrl v喔~</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -120,7 +117,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2018/07/19/crackme/" data-title="crackme之走迷宫 | far‘blog" data-tsina="" class="share clearfix">
+	  <div data-url="http://yoursite.com/2018/07/19/寻找图床/" data-title="寻找图床/chrome插件的坑 | far‘blog" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -133,19 +130,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2018/07/19/寻找图床/" title="寻找图床/chrome插件的坑">
-  <strong>上一篇：</strong><br/>
-  <span>
-  寻找图床/chrome插件的坑</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2018/07/18/hello-world/"  title="Hello World">
+<a href="/2018/07/19/crackme/"  title="crackme之走迷宫">
  <strong>下一篇：</strong><br/> 
- <span>Hello World
+ <span>crackme之走迷宫
 </span>
 </a>
 </div>
