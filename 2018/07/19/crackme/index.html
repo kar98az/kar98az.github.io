@@ -11,20 +11,20 @@
     
 
     
-    <meta name="description" content="这是一道关于走迷宫的逆向题，也是逆向的常见题型。 ##寻找关键代码这是整个走迷宫的运行机制，v7,v17则是控制着往哪里走，v7–向上走，v7++则是往下走，而且v7还是初始化为3，则是起始位置是（3,0），那么终点就是（9,8）。点击sub_401000进入，这是整个代码最核心的部分，这里控制着v7,v17的值，a2也就是上图传入的a8,a8也就是选择v7/v17的。你输入的数值v6的每一位与4">
+    <meta name="description" content="这是一道关于走迷宫的逆向题，也是逆向的常见题型。寻找关键代码这是整个走迷宫的运行机制，v7,v17则是控制着往哪里走，v7–向上走，v7++则是往下走，而且v7还是初始化为3，则是起始位置是（3,0），那么终点就是（9,8）。点击sub_401000进入，这是整个代码最核心的部分，这里控制着v7,v17的值，a2也就是上图传入的a8,a8也就是选择v7/v17的。你输入的数值v6的每一位与40E0">
 <meta property="og:type" content="article">
 <meta property="og:title" content="crackme之走迷宫">
 <meta property="og:url" content="http://yoursite.com/2018/07/19/crackme/index.html">
 <meta property="og:site_name" content="far‘blog">
-<meta property="og:description" content="这是一道关于走迷宫的逆向题，也是逆向的常见题型。 ##寻找关键代码这是整个走迷宫的运行机制，v7,v17则是控制着往哪里走，v7–向上走，v7++则是往下走，而且v7还是初始化为3，则是起始位置是（3,0），那么终点就是（9,8）。点击sub_401000进入，这是整个代码最核心的部分，这里控制着v7,v17的值，a2也就是上图传入的a8,a8也就是选择v7/v17的。你输入的数值v6的每一位与4">
+<meta property="og:description" content="这是一道关于走迷宫的逆向题，也是逆向的常见题型。寻找关键代码这是整个走迷宫的运行机制，v7,v17则是控制着往哪里走，v7–向上走，v7++则是往下走，而且v7还是初始化为3，则是起始位置是（3,0），那么终点就是（9,8）。点击sub_401000进入，这是整个代码最核心的部分，这里控制着v7,v17的值，a2也就是上图传入的a8,a8也就是选择v7/v17的。你输入的数值v6的每一位与40E0">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftf2ncz320j30jz0ckt91.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftf4nonvjyj30em0apglo.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftf5jloq6fj30mu02p3yg.jpg">
-<meta property="og:updated_time" content="2018-07-19T07:06:01.164Z">
+<meta property="og:updated_time" content="2018-07-19T07:55:57.494Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="crackme之走迷宫">
-<meta name="twitter:description" content="这是一道关于走迷宫的逆向题，也是逆向的常见题型。 ##寻找关键代码这是整个走迷宫的运行机制，v7,v17则是控制着往哪里走，v7–向上走，v7++则是往下走，而且v7还是初始化为3，则是起始位置是（3,0），那么终点就是（9,8）。点击sub_401000进入，这是整个代码最核心的部分，这里控制着v7,v17的值，a2也就是上图传入的a8,a8也就是选择v7/v17的。你输入的数值v6的每一位与4">
+<meta name="twitter:description" content="这是一道关于走迷宫的逆向题，也是逆向的常见题型。寻找关键代码这是整个走迷宫的运行机制，v7,v17则是控制着往哪里走，v7–向上走，v7++则是往下走，而且v7还是初始化为3，则是起始位置是（3,0），那么终点就是（9,8）。点击sub_401000进入，这是整个代码最核心的部分，这里控制着v7,v17的值，a2也就是上图传入的a8,a8也就是选择v7/v17的。你输入的数值v6的每一位与40E0">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftf2ncz320j30jz0ckt91.jpg">
 
     
@@ -105,9 +105,8 @@
 		
 		</div>
 		
-		<p>这是一道关于走迷宫的逆向题，也是逆向的常见题型。</p>
-<p>##寻找关键代码<br>这是整个走迷宫的运行机制，v7,v17则是控制着往哪里走，v7–向上走，v7++则是往下走，而且v7还是初始化为3，则是起始位置是（3,0），那么终点就是（9,8）。<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftf2ncz320j30jz0ckt91.jpg" alt=""><br>点击sub_401000进入，这是整个代码最核心的部分，这里控制着v7,v17的值，a2也就是上图传入的a8,a8也就是选择v7/v17的。你输入的数值v6的每一位与40E000数组的每一个进行对比，也就是你输入的数值要在40E000的数组中，而且每一步还要符合是迷宫的正确走法。<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftf4nonvjyj30em0apglo.jpg" alt=""><br>40E000数组的内容和40E018的内容：<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftf5jloq6fj30mu02p3yg.jpg" alt=""></p>
-<p>##解析<br>迷宫中“#”是通行，“*”是障碍物。这一点从代码中也可以看出来。也可以看出迷宫图是9行10列。那么a8就是4114，4422，3222，4414，4442，2223。则可以逆向推出v6应该是Ba47F1A256E0B347F1B2C6Ef,这就是最终flag，</p>
+		<p>这是一道关于走迷宫的逆向题，也是逆向的常见题型。<br>寻找关键代码<br>这是整个走迷宫的运行机制，v7,v17则是控制着往哪里走，v7–向上走，v7++则是往下走，而且v7还是初始化为3，则是起始位置是（3,0），那么终点就是（9,8）。<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftf2ncz320j30jz0ckt91.jpg" alt=""><br>点击sub_401000进入，这是整个代码最核心的部分，这里控制着v7,v17的值，a2也就是上图传入的a8,a8也就是选择v7/v17的。你输入的数值v6的每一位与40E000数组的每一个进行对比，也就是你输入的数值要在40E000的数组中，而且每一步还要符合是迷宫的正确走法。<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftf4nonvjyj30em0apglo.jpg" alt=""><br>40E000数组的内容和40E018的内容：<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftf5jloq6fj30mu02p3yg.jpg" alt=""></p>
+<p>##解析<br>迷宫中“#”是通行，“*”是障碍物。这一点从代码中也可以看出来。也可以看出迷宫图是9行10列。那么a8就是4114，4422，3222，4414，4442，2223。则可以逆向推出v6应该是Ba47F1A256E0B347F1B2C6Ef,这就是最终flag，<br>high3:<a href="https://pan.baidu.com/s/1JB1jrq7qBzc1-pP38YIE4w" target="_blank" rel="noopener">crackme</a><br>密码：ss6z</p>
   
 	</div>
 		<footer class="article-footer clearfix">
