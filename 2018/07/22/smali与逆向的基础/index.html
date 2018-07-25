@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="far&#39;blog">
 <meta property="og:description" content="（原创）转载请注明出处 什么是smali&amp;ensp;关于这个问题，说来就话长了，不知道从那些起，就随便写吧！smali是一种语言，其实就是一种dalvik寄存器指令语言，他是由Android的应用程序APK通过apktool反编译出来的，生成的文件里都是以.smali结尾的文件。每一个文件都是java中的一个类，他里面的代码是干啥的呢？主要就是对java文件的翻译，他还原了很多java不能表现的状">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-24T14:07:12.610Z">
+<meta property="og:updated_time" content="2018-07-25T11:19:04.591Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="smali与逆向的关系">
 <meta name="twitter:description" content="（原创）转载请注明出处 什么是smali&amp;ensp;关于这个问题，说来就话长了，不知道从那些起，就随便写吧！smali是一种语言，其实就是一种dalvik寄存器指令语言，他是由Android的应用程序APK通过apktool反编译出来的，生成的文件里都是以.smali结尾的文件。每一个文件都是java中的一个类，他里面的代码是干啥的呢？主要就是对java文件的翻译，他还原了很多java不能表现的状">
@@ -106,6 +106,31 @@
 <h3 id="什么是APK？怎么生成的，过程？"><a href="#什么是APK？怎么生成的，过程？" class="headerlink" title="什么是APK？怎么生成的，过程？"></a>什么是APK？怎么生成的，过程？</h3><p>&ensp;APK（AndroidPackage）,就是Android的安装包，他可以直接安装在Android手机上。Android是java开发的环境，所以Apk也是用java的语言写的，那么他在成为.APK文件之前都经过什么？首先，java的源码被编译成以.class结尾的字节码文件，后经过，dalvik虚拟机的作用生成了以.dex结尾的文件，.dex文件和.class文件可是大不一样，dalvik虚拟机与标准的java虚拟机是不兼容的，dex文件与class文件相比，不论是文件结构还是opcode都不一样。</p>
 <h3 id="什么是dalvik"><a href="#什么是dalvik" class="headerlink" title="什么是dalvik"></a>什么是dalvik</h3><p>&ensp;提到了那么多次dalvik，想必还不知道dalvik究竟是个什么东西吧<br>Android应用程序在运行时必须支持多种不同类型的设备，并且基于安全、性能和可靠性考虑必须被沙箱隔离。如此看来，，虚拟机貌似是非常合适的选择。<br>dalvik虚拟机是基于寄存器，其内部的执行器执行的是dex格式的文件，并且通过dxtool工具将class文件转换为dex文件，要想Android应用在它自己的虚拟机进程内执行，不仅仅要求大量的虚拟机高效的运行而且还要求新虚拟机能够快速创建（用户会不定时打开新的应用）</p>
 <h3 id="dalvik虚拟机里两种不同寄存器的表示方法"><a href="#dalvik虚拟机里两种不同寄存器的表示方法" class="headerlink" title="dalvik虚拟机里两种不同寄存器的表示方法"></a>dalvik虚拟机里两种不同寄存器的表示方法</h3><p>&ensp;命名法主要有p字命名法和v字命名法，<br>总结一下下有什么不同：<br>假设一个函数用到了M个寄存器，并且有N个参数，那么dalvik有自己的一套的规定，局部变量使用前M-N个寄存器，后N个寄存器被N个参数使用<br>V字命名法：<font color="red">采用小写“v”,开头的方式表示函数中用到的<font color="green">局部变量寄存器</font>和<font color="green">参数寄存器</font>，<font color="green">所有寄存器</font>从v0开始，依次递增。</font><br>p字命名法:<font color="red">并<font color="green">没有影响局部变量命名，还是以小写“v”开头</font>，在p字命名方法中，参数寄存器是从p0开始的并且依次递增，</font><br>注：带颜色的字体请仔细斟酌。<br>附表说明：<br>|v字命名法|p字命名法|寄存器表示|<br>|-|-|<br>|v0|v0|第一个局部变量｜<br>|v1|v2|第二个局部变量｜<br>|…|…|局部变量寄存器依次递增｜<br>|vM-vN|p0|第一个参数寄存器｜<br>|…|…|寄存器依次递增｜<br>|vM-1|pN-1|第Ｎ个寄存器｜</p>
+<p><table border="1"></table></p>
+<p><tr></tr></p>
+<p><td>v字命名法</td></p>
+<p><td>p字命名法</td></p>
+<p><td>寄存器表示</td><br></p>
+<p><tr></tr></p>
+<p><td>v0</td></p>
+<p><td>v0</td></p>
+<p><td>第一个局部变量寄存器</td><br></p>
+<p><tr></tr></p>
+<p><td>…</td></p>
+<p><td>…</td></p>
+<p><td>依次递增</td><br></p>
+<p><tr></tr></p>
+<p><td>vM-vN</td></p>
+<p><td>p0</td></p>
+<p><td>第一个参数寄存器</td><br></p>
+<p><tr></tr></p>
+<p><td>…</td></p>
+<p><td>…</td></p>
+<p><td>依次递增</td><br></p>
+<p><tr></tr></p>
+<p><td>vM</td></p>
+<p><td>pN</td></p>
+<p><td>第N个参数寄存器</td><br><br></p>
 <h2 id="简单说说smali语法规则，不喜勿喷"><a href="#简单说说smali语法规则，不喜勿喷" class="headerlink" title="简单说说smali语法规则，不喜勿喷"></a>简单说说smali语法规则，不喜勿喷</h2><p>.field private isFalg:z          定义变量<br>.method  配合<br> end method      //函数起始与结束<br>.parameter     参数<br>.prologue      代码起始处<br>.line 12     此代码在12行<br>invoke-super  调用父类<br>invoke-direct  调用函数<br>invoke-static   调用静态函数<br>return-void   函数返回void，也就是无返回<br>new instance 创建实例<br>iput-object   给对象输入值，也就是赋值<br>iget-object   获取对象，也就是调用对象<br><strong>条件跳转分支：</strong><br>“if -eq vA,vB,:cond_<strong>“<br>如果vA等于VB则跳转到cond</strong>_<br>-ne 不等于<br>-lt 小于<br>-gt 大于<br>-le 小于等于<br>-ge 大于等于<br>如果表示一个数小于零或大于零或等等，在后面加‘z’.</p>
 <h2 id="APK文件如何反编译成java源码"><a href="#APK文件如何反编译成java源码" class="headerlink" title="APK文件如何反编译成java源码"></a>APK文件如何反编译成java源码</h2><p>&ensp;主要使用工具dex2jar和jd-gui,<br>dex2jar是将.dex文件反编译成java源码<br>jd-gui主要是查看.dex文件反编译成的.jar的文件<br>详细解题过程见：<a href="https://kar98az.github.io" target="_blank" rel="noopener"></a></p>
   
