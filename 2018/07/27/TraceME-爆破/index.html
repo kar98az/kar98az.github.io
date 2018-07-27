@@ -4,29 +4,39 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>base大家族 | far&#39;blog</title>
+    <title>TraceME,爆破，就是改个1 | far&#39;blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="far">
     
 
     
-    <meta name="description" content="&amp;ensp;base家族有哪些成员呢？包括base16（2的4次方）[4个0,1一组]，base32(2的5次方)[5个0,1一组]，base64(2的6次方)[6个0，1一组].他们的作用就是用相应的字符串表示一串二进制数，也就是二进制数组。 那么他们用哪些字符表示一串二进制数呢？&amp;ensp;base64由：大小写字母，0~9，+，-,64位组成的。索引表：转码原理:&amp;ensp;base32由：">
+    <meta name="description" content="首先有折磨一个可执行程序,测试并得到结果如下：我们需要做的就是让他允许我输入的用户名和密码。我们可以知道这样的可执行程序一定有一个接受输入字符串的函数，如：GetDlgItemTextA(‘A’是ASCII码的意思)。首先我们先试试这个程序，一个往下走，在弹出窗口的那个地址设断点，跟进去，再设断点，再跟，你会发现，最后陷入循环。这样我们并不能找出有用的信息，那我们尝试寻那个函数，载入程序，ctrl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="base大家族">
-<meta property="og:url" content="http://yoursite.com/2018/07/25/base家族/index.html">
+<meta property="og:title" content="TraceME,爆破，就是改个1">
+<meta property="og:url" content="http://yoursite.com/2018/07/27/TraceME-爆破/index.html">
 <meta property="og:site_name" content="far&#39;blog">
-<meta property="og:description" content="&amp;ensp;base家族有哪些成员呢？包括base16（2的4次方）[4个0,1一组]，base32(2的5次方)[5个0,1一组]，base64(2的6次方)[6个0，1一组].他们的作用就是用相应的字符串表示一串二进制数，也就是二进制数组。 那么他们用哪些字符表示一串二进制数呢？&amp;ensp;base64由：大小写字母，0~9，+，-,64位组成的。索引表：转码原理:&amp;ensp;base32由：">
+<meta property="og:description" content="首先有折磨一个可执行程序,测试并得到结果如下：我们需要做的就是让他允许我输入的用户名和密码。我们可以知道这样的可执行程序一定有一个接受输入字符串的函数，如：GetDlgItemTextA(‘A’是ASCII码的意思)。首先我们先试试这个程序，一个往下走，在弹出窗口的那个地址设断点，跟进去，再设断点，再跟，你会发现，最后陷入循环。这样我们并不能找出有用的信息，那我们尝试寻那个函数，载入程序，ctrl">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftm8z1c06oj30ho0ctdgf.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftm90d6dxrj30c3061aau.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftm91de9tsj30ha0893z4.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftm91umn57j30cx041aa1.jpg">
-<meta property="og:updated_time" content="2018-07-25T11:23:52.110Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftol6fegjtj30dv07jdjb.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftopc5g7hsj30ss05c75a.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftopd93f7ej30lu042aa2.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftophb8hc9j30hj08tmxv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftopicuqegj30kd0370so.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftopoz1zc0j30lz01wt8i.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftoptc6scxj30md060t9g.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftopvawpd9j30fs0173yc.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftoq48wmusj309901zt8j.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftoq6zcdc5j30lq02k3yf.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftoqfg5gyhj30t804ljro.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftoqh7yurdj30o202e3yg.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftoqjfoka9j30qw01xmx3.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftoqosf2ooj30bp04sjs1.jpg">
+<meta property="og:updated_time" content="2018-07-27T13:27:48.265Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="base大家族">
-<meta name="twitter:description" content="&amp;ensp;base家族有哪些成员呢？包括base16（2的4次方）[4个0,1一组]，base32(2的5次方)[5个0,1一组]，base64(2的6次方)[6个0，1一组].他们的作用就是用相应的字符串表示一串二进制数，也就是二进制数组。 那么他们用哪些字符表示一串二进制数呢？&amp;ensp;base64由：大小写字母，0~9，+，-,64位组成的。索引表：转码原理:&amp;ensp;base32由：">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftm8z1c06oj30ho0ctdgf.jpg">
+<meta name="twitter:title" content="TraceME,爆破，就是改个1">
+<meta name="twitter:description" content="首先有折磨一个可执行程序,测试并得到结果如下：我们需要做的就是让他允许我输入的用户名和密码。我们可以知道这样的可执行程序一定有一个接受输入字符串的函数，如：GetDlgItemTextA(‘A’是ASCII码的意思)。首先我们先试试这个程序，一个往下走，在弹出窗口的那个地址设断点，跟进去，再设断点，再跟，你会发现，最后陷入循环。这样我们并不能找出有用的信息，那我们尝试寻那个函数，载入程序，ctrl">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006SH20tly1ftol6fegjtj30dv07jdjb.jpg">
 
     
     <link rel="alternative" href="/atom.xml" title="far&#39;blog" type="application/atom+xml">
@@ -86,14 +96,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2018/07/25/base家族/" title="base大家族" itemprop="url">base大家族</a>
+      <a href="/2018/07/27/TraceME-爆破/" title="TraceME,爆破，就是改个1" itemprop="url">TraceME,爆破，就是改个1</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="far" target="_blank" itemprop="author">far</a>
 		
   <p class="article-time">
-    <time datetime="2018-07-25T07:52:51.000Z" itemprop="datePublished"> Published 2018-07-25</time>
+    <time datetime="2018-07-27T09:25:45.000Z" itemprop="datePublished"> Published 2018-07-27</time>
     
   </p>
 </header>
@@ -102,13 +112,11 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#那么他们用哪些字符表示一串二进制数呢？"><span class="toc-number">1.</span> <span class="toc-text">那么他们用哪些字符表示一串二进制数呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#疑问"><span class="toc-number">2.</span> <span class="toc-text">疑问</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p>&ensp;base家族有哪些成员呢？<br>包括base16（2的4次方）[4个0,1一组]，base32(2的5次方)[5个0,1一组]，base64(2的6次方)[6个0，1一组].<br>他们的作用就是用相应的字符串表示一串二进制数，也就是二进制数组。</p>
-<h2 id="那么他们用哪些字符表示一串二进制数呢？"><a href="#那么他们用哪些字符表示一串二进制数呢？" class="headerlink" title="那么他们用哪些字符表示一串二进制数呢？"></a>那么他们用哪些字符表示一串二进制数呢？</h2><p>&ensp;base64由：大小写字母，0~9，+，-,64位组成的。<br>索引表：<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftm8z1c06oj30ho0ctdgf.jpg" alt=""><br>转码原理:<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftm90d6dxrj30c3061aau.jpg" alt=""><br>&ensp;base32由：大写字母，234567,32位组成<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftm91de9tsj30ha0893z4.jpg" alt=""><br>&ensp;base16（hex）由：0~9，A~F，16位组成<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftm91umn57j30cx041aa1.jpg" alt=""><br>base32,base16和base64的转码原理一样。</p>
-<h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><p>可能有人会问，如何最后的不够六个一组，那么怎么办？<br>那么就补0，有多少位补多少。<br>如果遇到一组全是0的，那么用“=”代替。</p>
+		<p>首先有折磨一个可执行程序,测试并得到结果如下：<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftol6fegjtj30dv07jdjb.jpg" alt=""><br>我们需要做的就是让他允许我输入的用户名和密码。<br>我们可以知道这样的可执行程序一定有一个接受输入字符串的函数，如：<br>GetDlgItemTextA(‘A’是ASCII码的意思)。<br>首先我们先试试这个程序，一个往下走，在弹出窗口的那个地址设断点，跟进去，再设断点，再跟，你会发现，最后陷入循环。这样我们并不能找出有用的信息，那<br>我们尝试寻那个函数，载入程序，ctrl+G，输入该函数的名称：<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftopc5g7hsj30ss05c75a.jpg" alt=""><br>设断点，重载，<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftopd93f7ej30lu042aa2.jpg" alt=""><br>F9运行，随便输入用户名和密码，check,然后到断点出。<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftophb8hc9j30hj08tmxv.jpg" alt=""><br>这时候可以看见在此断点的位置出现了GetDlgItemTextA函数来接受你输入的值。<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftopicuqegj30kd0370so.jpg" alt=""><br>然后继续往下走，看看接受的我输入的值后，程序干了什么，走着<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftopoz1zc0j30lz01wt8i.jpg" alt=""><br>可以看见在这个，，，我也不知道什么窗口的发现了你输入的用户名，<br>我们呢到内存里瞅瞅，去哪里瞅呢,看汇编，我们知道，到当前的Esp+4c：<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftoptc6scxj30md060t9g.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftopvawpd9j30fs0173yc.jpg" alt=""><br>看到内存里有“qwert”,其实我们还可以输入0018f910，就是那个不知名的窗口所显示的地址。<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftoq48wmusj309901zt8j.jpg" alt=""><br>可以在寄存器窗口看到用户名，密码都存入了寄存器。<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftoq6zcdc5j30lq02k3yf.jpg" alt=""><br>在这里，eax是上面函数的返回值，（规定，在任何编译器，和任何语言中，eax都是用来存返回值的），然后与eax比较，相等则跳转，这里不让他跳转，<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftoqfg5gyhj30t804ljro.jpg" alt=""><br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftoqh7yurdj30o202e3yg.jpg" alt=""><br>标志寄存器的z位置为0或nop填充这一句，不让他跳转。再F8走着。<br>look this：<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftoqjfoka9j30qw01xmx3.jpg" alt=""><br>成功了。然后复制到可执行文件-&gt;备份-&gt;保存文件。<br>查看结果：<br><img src="https://ws1.sinaimg.cn/large/006SH20tly1ftoqosf2ooj30bp04sjs1.jpg" alt=""><br>是不是很easy!</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -121,7 +129,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2018/07/25/base家族/" data-title="base大家族 | far&#39;blog" data-tsina="" class="share clearfix">
+	  <div data-url="http://yoursite.com/2018/07/27/TraceME-爆破/" data-title="TraceME,爆破，就是改个1 | far&#39;blog" data-tsina="" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -134,19 +142,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2018/07/27/TraceME-爆破/" title="TraceME,爆破，就是改个1">
-  <strong>上一篇：</strong><br/>
-  <span>
-  TraceME,爆破，就是改个1</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2018/07/24/APK，smali逆向实战/"  title="APK，smali逆向实战">
+<a href="/2018/07/25/base家族/"  title="base大家族">
  <strong>下一篇：</strong><br/> 
- <span>APK，smali逆向实战
+ <span>base大家族
 </span>
 </a>
 </div>
@@ -163,7 +163,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#那么他们用哪些字符表示一串二进制数呢？"><span class="toc-number">1.</span> <span class="toc-text">那么他们用哪些字符表示一串二进制数呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#疑问"><span class="toc-number">2.</span> <span class="toc-text">疑问</span></a></li></ol>
+ 
  
   </div>
 
